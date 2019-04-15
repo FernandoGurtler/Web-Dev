@@ -14,9 +14,7 @@
 
   <header class="cabecalho">
 
-    <h1>
-      Fernando Gürtler
-    </h1>
+    <h1 id='nome'>Fernando Gürtler</h1>
     <h2>
       Doente :)
     </h2>
@@ -48,6 +46,10 @@
 
   <main>
 
+    <button onClick="mudarTexto()">
+      Mudar texto
+    </button>
+
     <section class="secao1">
 
       <p>
@@ -71,4 +73,44 @@
     </span>
   </footer>
 </body>
+
+<script>
+
+  function mudarTexto() {
+    var nome = document.getElementById('nome')
+    var alemao = 'Alemão'
+    
+    if(nome.textContent == 'Fernando Gürtler') {
+      nome.textContent = alemao
+    } else if(nome.textContent == alemao) {
+      nome.textContent = 'Fernando Gürtler'
+    }
+  }
+
+  /*var a = 'Minha idade é '
+  var b = 13
+  var c = ' quase fazendo 19'
+ 
+  console.log(a + (b + 5) + c)
+
+  var idade = 10
+  var ehMaior = idade >= 18
+  var ehTeen = idade >= 12 && idade <=17
+
+  if(ehMaior) {
+    console.log('Parabéns, você é maior de idade! :D')
+  } else if(ehTeen) {
+      console.log('Que pena, você não é maior de idade... :( Pelo menos não é criança')
+  } else console.log('Que pena, é criança. Mais sorte na próxima vida.')
+
+  var nome = document.getElementById('nome')
+
+  console.log(nome)
+  var textDoNome = nome.textContent
+
+  console.log(textDoNome)
+
+  nome.textContent = 'Não é meu nome'*/
+
+</script>
 </html>
